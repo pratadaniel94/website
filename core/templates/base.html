@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    {% load static %}
     <meta charset="utf-8" />
-		<title>Metronic | Dashboard</title>
+		<title>Silver Developer</title>
 		<meta name="description" content="Latest updates and statistic charts">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 		<!--begin::Fonts -->
 		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+        <link rel="icon" type="image/png" sizes="32x32" href="../static/media/company-logos/favicon.png">
 		<script>
 			WebFont.load({
 				google: {
@@ -66,67 +68,74 @@
 		<!--begin::Layout Skins(used by all pages) -->
 
 		<!--end::Layout Skins -->
-		<link rel="shortcut icon" href="#" />
 </head>
 <body>
     <!-- begin::Sticky Toolbar -->
-        <ul class="kt-sticky-toolbar" style="margin-top: 30px;">
-            <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--success" id="kt_demo_panel_toggle" data-toggle="kt-tooltip" title="Siga-me linkedin" data-placement="right">
-                <a href="https://www.linkedin.com/in/pratadaniel94/" class=""><i class="flaticon-linkedin-logo"></i></a>
-            </li>
-            <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--danger" data-toggle="kt-tooltip" title="Entre em contato" data-placement="right">
-                <a href="#" target="_blank" data-toggle="modal" data-target="#kt_modal_4"><i class="flaticon-email"></i></a>
-            </li>
-            <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--brand" id="kt_demo_panel_toggle" data-toggle="kt-tooltip" title="Nosso Grupo" data-placement="right">
-                <a href="#" class=""><i class="flaticon2-telegram-logo"></i></a>
-            </li>
-        </ul>
-        <!--begin::Modal-->
-        <div class="modal fade" id="kt_modal_4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Fale conosco</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <form>
-                            <div class="form-group">
-                                <label for="recipient-name" class="form-control-label">Destinatario:</label>
-                                <input type="text" class="form-control" id="recipient-name">
-                            </div>
-                            <div class="form-group">
-                                <label for="message-text" class="form-control-label">Mensagem:</label>
-                                <textarea class="form-control" id="message-text"></textarea>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                        <button type="button" class="btn btn-primary">Enviar</button>
-                    </div>
+    <ul class="kt-sticky-toolbar" style="margin-top: 30px;">
+        <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--success" id="kt_demo_panel_toggle" data-toggle="kt-tooltip" title="Siga-me linkedin" data-placement="right">
+            <a href="https://www.linkedin.com/in/pratadaniel94/" class=""><i class="flaticon-linkedin-logo"></i></a>
+        </li>
+        <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--danger" data-toggle="kt-tooltip" title="Entre em contato" data-placement="right">
+            <a href="#" target="_blank" data-toggle="modal" data-target="#kt_modal_4"><i class="flaticon-email"></i></a>
+        </li>
+        <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--brand" id="kt_demo_panel_toggle" data-toggle="kt-tooltip" title="Nosso Grupo" data-placement="right">
+            <a href="#" class=""><i class="flaticon2-telegram-logo"></i></a>
+        </li>
+        <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--warning" id="kt_demo_panel_toggle" data-toggle="kt-tooltip" title="Siga-me GitHub" data-placement="right">
+            <a href="https://github.com/pratadaniel94" class=""><i class="fab fa-github-alt"></i></a>
+        </li>
+    </ul>
+    <!-- end::Sticky Toolbar -->
+
+    <!--begin::Modal-->
+    <div class="modal fade" id="kt_modal_4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Fale conosco</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="recipient-name" class="form-control-label">Destinatario:</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text" class="form-control-label">Mensagem:</label>
+                            <textarea class="form-control" id="message-text"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary">Enviar</button>
                 </div>
             </div>
         </div>
-        <!--end::Modal-->
-        <!-- end::Sticky Toolbar -->
-    <div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed ">
-            <div class="kt-header-mobile__logo">
-                <a href="/">
-                    <img alt="Logo" src="../static/media/company-logos/demo1.png" />
-                </a>
-            </div>
-            <div class="kt-header-mobile__toolbar">
-                <button class="kt-header-mobile__toolbar-toggler" id="kt_header_mobile_toggler"><span></span></button>
-            </div>
     </div>
+    <!--end::Modal-->
+
+    <!--begin::Menu mobile-->
+    <div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed ">
+        <div class="kt-header-mobile__logo">
+            <a href="/">
+                <img alt="Logo" width="30%" src="../static/media/company-logos/silver.png" class="kt-header__brand-logo-default" />
+            </a>
+        </div>
+        <div class="kt-header-mobile__toolbar">
+            <button class="kt-header-mobile__toolbar-toggler" id="kt_header_mobile_toggler"><span></span></button>
+        </div>
+    </div>
+    <!--end::end Menu mobile-->
+
+    <!--begin::header-->
     <div id="kt_header" class="kt-header kt-grid__item  kt-header--fixed " data-ktheader-minimize="on">
     <div class="kt-header__top">
         <div class="kt-container ">
             <div class="kt-header__brand-logo">
                 <a href="/">
-                    <img alt="Logo" src="../static/media/company-logos/demo1.png" class="kt-header__brand-logo-default" />
+                    <img alt="Logo" width="30%" src="../static/media/company-logos/silver.png" class="kt-header__brand-logo-default" />
                 </a>
             </div>
         </div>
@@ -139,169 +148,105 @@
                 <div id="kt_header_menu" class="kt-header-menu kt-header-menu-mobile ">
                     <ul class="kt-menu__nav ">
                         <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel"><a href="/" class="kt-menu__link"><span class="kt-menu__link-text">Home</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a></li>
-                        <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true"><a href="javascript:;" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-text">Pages</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
-                            <div class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--left">
-                                <ul class="kt-menu__subnav">
-                                    <li class="kt-menu__item " aria-haspopup="true"><a href="javascript:;" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Create New Post</span></a></li>
-                                    <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Generate Reports</span><span class="kt-menu__link-badge"><span class="kt-badge kt-badge--success">2</span></span></a></li>
-                                    <li class="kt-menu__item  kt-menu__item--submenu" data-ktmenu-submenu-toggle="hover" aria-haspopup="true"><a href="#" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Manage Orders</span><i class="kt-menu__hor-arrow la la-angle-right"></i><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
-                                        <div class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--right">
-                                            <ul class="kt-menu__subnav">
-                                                <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><span class="kt-menu__link-text">Latest Orders</span></a></li>
-                                                <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><span class="kt-menu__link-text">Pending Orders</span></a></li>
-                                                <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><span class="kt-menu__link-text">Processed Orders</span></a></li>
-                                                <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><span class="kt-menu__link-text">Delivery Reports</span></a></li>
-                                                <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><span class="kt-menu__link-text">Payments</span></a></li>
-                                                <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><span class="kt-menu__link-text">Customers</span></a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="kt-menu__item  kt-menu__item--submenu" data-ktmenu-submenu-toggle="hover" aria-haspopup="true"><a href="#" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Customer Feedbacks</span><i class="kt-menu__hor-arrow la la-angle-right"></i><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
-                                        <div class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--right">
-                                            <ul class="kt-menu__subnav">
-                                                <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><span class="kt-menu__link-text">Customer Feedbacks</span></a></li>
-                                                <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><span class="kt-menu__link-text">Supplier Feedbacks</span></a></li>
-                                                <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><span class="kt-menu__link-text">Reviewed Feedbacks</span></a></li>
-                                                <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><span class="kt-menu__link-text">Resolved Feedbacks</span></a></li>
-                                                <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><span class="kt-menu__link-text">Feedback Reports</span></a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Register Member</span></a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true"><a href="javascript:;" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-text">Reports</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
-                            <div class="kt-menu__submenu  kt-menu__submenu--fixed kt-menu__submenu--left" style="width:1000px">
-                                <div class="kt-menu__subnav">
-                                    <ul class="kt-menu__content">
-                                        <li class="kt-menu__item ">
-                                            <h3 class="kt-menu__heading kt-menu__toggle"><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Finance Reports</span><i class="kt-menu__ver-arrow la la-angle-right"></i></h3>
-                                            <ul class="kt-menu__inner">
-                                                <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-icon flaticon-map"></i><span class="kt-menu__link-text">Annual Reports</span></a></li>
-                                                <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-icon flaticon-user"></i><span class="kt-menu__link-text">HR Reports</span></a></li>
-                                                <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-icon flaticon-clipboard"></i><span class="kt-menu__link-text">IPO Reports</span></a></li>
-                                                <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-icon flaticon-graphic-1"></i><span class="kt-menu__link-text">Finance Margins</span></a></li>
-                                                <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-icon flaticon-graphic-2"></i><span class="kt-menu__link-text">Revenue Reports</span></a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="kt-menu__item ">
-                                            <h3 class="kt-menu__heading kt-menu__toggle"><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Project Reports</span><i class="kt-menu__ver-arrow la la-angle-right"></i></h3>
-                                            <ul class="kt-menu__inner">
-                                                <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span class="kt-menu__link-text">Coca Cola CRM</span></a></li>
-                                                <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span class="kt-menu__link-text">Delta Airlines Booking Site</span></a></li>
-                                                <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span class="kt-menu__link-text">Malibu Accounting</span></a></li>
-                                                <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span class="kt-menu__link-text">Vineseed Website Rewamp</span></a></li>
-                                                <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span class="kt-menu__link-text">Zircon Mobile App</span></a></li>
-                                                <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span class="kt-menu__link-text">Mercury CMS</span></a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="kt-menu__item ">
-                                            <h3 class="kt-menu__heading kt-menu__toggle"><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">HR Reports</span><i class="kt-menu__ver-arrow la la-angle-right"></i></h3>
-                                            <ul class="kt-menu__inner">
-                                                <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Staff Directory</span></a></li>
-                                                <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Client Directory</span></a></li>
-                                                <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Salary Reports</span></a></li>
-                                                <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Staff Payslips</span></a></li>
-                                                <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Corporate Expenses</span></a></li>
-                                                <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Project Expenses</span></a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="kt-menu__item ">
-                                            <h3 class="kt-menu__heading kt-menu__toggle"><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Reporting Apps</span><i class="kt-menu__ver-arrow la la-angle-right"></i></h3>
-                                            <ul class="kt-menu__inner">
-                                                <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><span class="kt-menu__link-text">Report Adjusments</span></a></li>
-                                                <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><span class="kt-menu__link-text">Sources & Mediums</span></a></li>
-                                                <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><span class="kt-menu__link-text">Reporting Settings</span></a></li>
-                                                <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><span class="kt-menu__link-text">Conversions</span></a></li>
-                                                <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><span class="kt-menu__link-text">Report Flows</span></a></li>
-                                                <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><span class="kt-menu__link-text">Audit & Logs</span></a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true"><a href="javascript:;" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-text">Apps</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
-                            <div class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--left">
-                                <ul class="kt-menu__subnav">
-                                    <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">eCommerce</span></a></li>
-                                    <li class="kt-menu__item  kt-menu__item--submenu" data-ktmenu-submenu-toggle="hover" aria-haspopup="true"><a href="#" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Audience</span><i class="kt-menu__hor-arrow la la-angle-right"></i><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
-                                        <div class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--right">
-                                            <ul class="kt-menu__subnav">
-                                                <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-icon flaticon-users"></i><span class="kt-menu__link-text">Active Users</span></a></li>
-                                                <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-icon flaticon-interface-1"></i><span class="kt-menu__link-text">User Explorer</span></a></li>
-                                                <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-icon flaticon-lifebuoy"></i><span class="kt-menu__link-text">Users Flows</span></a></li>
-                                                <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-icon flaticon-graphic-1"></i><span class="kt-menu__link-text">Market Segments</span></a></li>
-                                                <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-icon flaticon-graphic"></i><span class="kt-menu__link-text">User Reports</span></a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Marketing</span></a></li>
-                                    <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Campaigns</span><span class="kt-menu__link-badge"><span class="kt-badge kt-badge--success">3</span></span></a></li>
-                                    <li class="kt-menu__item  kt-menu__item--submenu" data-ktmenu-submenu-toggle="hover" aria-haspopup="true"><a href="#" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Cloud Manager</span><i class="kt-menu__hor-arrow la la-angle-right"></i><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
-                                        <div class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--right">
-                                            <ul class="kt-menu__subnav">
-                                                <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-icon flaticon-add"></i><span class="kt-menu__link-text">File Upload</span><span class="kt-menu__link-badge"><span class="kt-badge kt-badge--danger">3</span></span></a></li>
-                                                <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-icon flaticon-signs-1"></i><span class="kt-menu__link-text">File Attributes</span></a></li>
-                                                <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-icon flaticon-folder"></i><span class="kt-menu__link-text">Folders</span></a></li>
-                                                <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-icon flaticon-cogwheel-2"></i><span class="kt-menu__link-text">System Settings</span></a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
+                        <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" ><a href="#" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-text">Artigos</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a></li>
+                        <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel"><a href="#" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-text">Parceiros</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a></li>
+                        <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel"><a href="#" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-text">Sobre</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a></li>
                     </ul>
                 </div>
-                <div class="kt-header-toolbar">
-                    <div class="kt-quick-search" id="kt_quick_search_default">
-                        <form method="get" class="kt-quick-search__form">
-                            <div class="input-group">
-                                <div class="input-group-prepend"><span class="input-group-text"><i class="flaticon2-search-1"></i></span></div>
-                                <input type="text" class="form-control kt-quick-search__input" placeholder="Search...">
-                                <div class="input-group-append"><span class="input-group-text"><i class="la la-close kt-quick-search__close"></i></span></div>
-                            </div>
-                        </form>
-                        <div id="kt_quick_search_toggle" data-toggle="dropdown" data-offset="0px,10px"></div>
-                        <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-lg">
-                            <div class="kt-quick-search__wrapper kt-scroll" data-scroll="true" data-height="300" data-mobile-height="200">
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
             <!-- end: Header Menu -->
         </div>
     </div>
-    </div>
+    <!--begin::end header-->
+
+    <!--begin::body-->
     <div class="kt-body kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-grid--stretch" id="kt_body">
         <div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
         <div class="kt-container  kt-grid__item kt-grid__item--fluid">
+            {% for apoiador in apoiadores %}
             <div class="row">
-                <div class="col-xl-8 order-lg-1 order-xl-1">
-            Conteudo da pagina
-        Por outro lado, o julgamento imparcial das eventualidades agrega valor ao estabelecimento do sistema de formação de quadros que corresponde às necessidades.
-        Por outro lado, o julgamento imparcial das eventualidades agrega valor ao estabelecimento do sistema de formação de quadros que corresponde às necessidades.
-        Por outro lado, o julgamento imparcial das eventualidades agrega valor ao estabelecimento do sistema de formação de quadros que corresponde às necessidades.
-        Caros amigos, a constante divulgação das informações possibilita uma melhor visão global das diretrizes de desenvolvimento para o futuro.
-        Caros amigos, a constante divulgação das informações possibilita uma melhor visão global das diretrizes d
-        e desenvolvimento para o futuro.
-        Caros amigos, a constante divulgação das informações possibilita uma melhor visão global das diretrizes de desenvolvimento para o futuro.
-            </div>
-                <div class="col-xl-4 col-lg-6 order-lg-1 order-xl-1">
-                    Por outro lado, o julgamento imparcial das eventualidades agrega valor ao estabelecimento do sistema de formação de quadros que corresponde às necessidades.
-        Por outro lado, o julgamento imparcial das eventualidades agrega valor ao estabelecimento do sistema de formação de quadros que corresponde às necessidades.
-        Por outro lado, o julgamento imparcial das eventualidades agrega valor ao estabelecimento do sistema de formação de quadros que corresponde às necessidades.
-        Caros amigos, a constante divulgação das informações possibilita uma melhor visão global das diretrizes de desenvolvimento para o futuro.
-        Caros amigos, a constant
+    <!--begin:: Widgets/Applications/User/Profile3-->
+    <div class="kt-portlet kt-portlet--height-fluid">
+        <div class="kt-portlet__body">
+            <div class="kt-widget kt-widget--user-profile-3">
+                <div class="kt-widget__top">
+                    <div class="kt-widget__media kt-hidden-">
+                        <img src="..{{ apoiador.img_perfil.url }}" alt="image">
+                    </div>
+                    <div class="kt-widget__pic kt-widget__pic--danger kt-font-danger kt-font-boldest kt-font-light kt-hidden">
+                        DP
+                    </div>
+                    <div class="kt-widget__content">
+                        <div class="kt-widget__head">
+                            <a href="#" class="kt-widget__username">
+                                {{ apoiador.nome }}
+                                <i class="flaticon2-correct"></i>
+                            </a>
+                        </div>
+                        <div class="kt-widget__subhead">
+                            <a><i class="flaticon2-ui"></i>{{ apoiador.profissao}}</a>
+                            <a><i class="flaticon2-new-email"></i>{{ apoiador.email}}</a>
+                            <a><i class="flaticon-event-calendar-symbol"></i>{{ apoiador.nascimento }}</a>
+                            <a><i class="flaticon2-placeholder"></i>São Paulo - SP</a>
+                        </div>
+                        <div class="kt-widget__info">
+                            <div class="kt-widget__desc">
+                                {{ apoiador.descricao }}
+                            </div>
+                            <div class="kt-widget__progress">
+                                <div class="kt-widget__text">
+                                    Progresso
+                                </div>
+                                <div class="progress" style="height: 5px;width: 100%;">
+                                    <div class="progress-bar kt-bg-danger" role="progressbar" style="width: 30%;" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="kt-widget__stats">
+                                    30%
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                </div>
+                <div class="kt-widget__bottom">
+                    <div class="kt-widget__item">
+                        <div class="kt-widget__icon">
+                            <a href="https://www.linkedin.com/in/pratadaniel94/" class=""><i class="flaticon-linkedin-logo"></i></a>
+                        </div>
+                    </div>
+                    <div class="kt-widget__item">
+                        <div class="kt-widget__icon">
+                            <a href="#" target="_blank" data-toggle="modal" data-target="#kt_modal_4"><i class="flaticon-email"></i></a>
+                        </div>
+                    </div>
+                    <div class="kt-widget__item">
+                        <div class="kt-widget__icon">
+                            <a href="#" class=""><i class="flaticon2-telegram-logo"></i></a>
+                        </div>
+                    </div>
+                    <div class="kt-widget__item">
+                        <div class="kt-widget__icon">
+                            <i class="flaticon-file-2"></i>
+                        </div>
+                    </div>
+                     <div class="kt-widget__item">
+                        <div class="kt-widget__icon">
+                            <a href="https://github.com/pratadaniel94" class=""><i class="fab fa-github-alt"></i></a>
+                        </div>
+                    </div>
             </div>
-            </div>
+        </div>
     </div>
+    </div>
+    <!--end:: Widgets/Applications/User/Profile3-->
+            </div>
+            {% endfor %}
+        </div>
+        </div>
+    </div>
+    <!--begin::end body-->
 
-<!-- begin:: Footer -->
+    <!-- begin:: Footer -->
     <div class="kt-footer  kt-footer--extended  kt-grid__item" id="kt_footer">
         <div class="kt-footer__top">
             <div class="kt-container ">
@@ -311,7 +256,7 @@
                             <h3 class="kt-footer__title">About</h3>
                             <div class="kt-footer__content">
                                 Whatever method you chosse,these nine will
-                                make you re-think theway you craft healines
+                                make you re-think theway you craftx healines
                                 Why? Because they all have points in that are
                                 worth from a point of view.
                             </div>
@@ -363,8 +308,7 @@
                         </a>
                         <div class="kt-footer__copyright">
                             2019&nbsp;&copy;&nbsp;
-                            <a href="#
-" target="_blank">Keenthemes</a>
+                            <a href="#" target="_blank">Keenthemes</a>
                         </div>
                     </div>
                     <div class="kt-footer__menu">
@@ -376,10 +320,10 @@
             </div>
         </div>
     </div>
-
     <!-- end:: Footer -->
-<!-- begin::Global Config(global config for global JS sciprts) -->
-		<script>
+
+    <!-- begin::Global Config(global config for global JS sciprts) -->
+    <script>
 			var KTAppOptions = {
 				"colors": {
 					"state": {
@@ -399,10 +343,10 @@
 				}
 			};
 		</script>
+    <!-- end::Global Config -->
 
-		<!-- end::Global Config -->
 
-		<!--begin:: Global Mandatory Vendors -->
+    <!--begin:: Global Mandatory Vendors -->
 		<script src="./static/vendors/general/jquery/dist/jquery.js" type="text/javascript"></script>
 		<script src="./static/vendors/general/popper.js/dist/umd/popper.js" type="text/javascript"></script>
 		<script src="./static/vendors/general/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
@@ -412,10 +356,9 @@
 		<script src="./static/vendors/general/perfect-scrollbar/dist/perfect-scrollbar.js" type="text/javascript"></script>
 		<script src="./static/vendors/general/sticky-js/dist/sticky.min.js" type="text/javascript"></script>
 		<script src="./static/vendors/general/wnumb/wNumb.js" type="text/javascript"></script>
+    <!--end:: Global Mandatory Vendors -->
 
-		<!--end:: Global Mandatory Vendors -->
-
-		<!--begin:: Global Optional Vendors -->
+    <!--begin:: Global Optional Vendors -->
 		<script src="./static/vendors/general/jquery-form/dist/jquery.form.min.js" type="text/javascript"></script>
 		<script src="./static/vendors/general/block-ui/jquery.blockUI.js" type="text/javascript"></script>
 		<script src="./static/vendors/general/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js" type="text/javascript"></script>
@@ -466,23 +409,20 @@
 		<script src="./static/vendors/general/jquery.repeater/src/jquery.input.js" type="text/javascript"></script>
 		<script src="./static/vendors/general/jquery.repeater/src/repeater.js" type="text/javascript"></script>
 		<script src="./static/vendors/general/dompurify/dist/purify.js" type="text/javascript"></script>
+    <!--end:: Global Optional Vendors -->
 
-		<!--end:: Global Optional Vendors -->
+    <!--begin::Global Theme Bundle(used by all pages) -->
+    <script src="./static/js/scripts.bundle.js" type="text/javascript"></script>
+    <!--end::Global Theme Bundle -->
 
-		<!--begin::Global Theme Bundle(used by all pages) -->
-		<script src="./static/js/scripts.bundle.js" type="text/javascript"></script>
+    <!--begin::Page Vendors(used by this page) -->
+    <script src="./static/vendors/custom/fullcalendar/fullcalendar.bundle.js" type="text/javascript"></script>
+    <script src="./static/vendors/custom/gmaps/gmaps.js" type="text/javascript"></script>
+    <!--end::Page Vendors -->
 
-		<!--end::Global Theme Bundle -->
+    <!--begin::Page Scripts(used by this page) -->
+    <script src="./static/js/pages/dashboard.js" type="text/javascript"></script>
+    <!--end::Page Scripts -->
 
-		<!--begin::Page Vendors(used by this page) -->
-		<script src="./static/vendors/custom/fullcalendar/fullcalendar.bundle.js" type="text/javascript"></script>
-		<script src="./static/vendors/custom/gmaps/gmaps.js" type="text/javascript"></script>
-
-		<!--end::Page Vendors -->
-
-		<!--begin::Page Scripts(used by this page) -->
-		<script src="./static/js/pages/dashboard.js" type="text/javascript"></script>
-
-		<!--end::Page Scripts -->
 </body>
 </html>
