@@ -70,51 +70,7 @@
 		<!--end::Layout Skins -->
 </head>
 <body>
-    <!-- begin::Sticky Toolbar -->
-    <ul class="kt-sticky-toolbar" style="margin-top: 30px;">
-        <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--success" id="kt_demo_panel_toggle" data-toggle="kt-tooltip" title="Siga-me linkedin" data-placement="right">
-            <a href="https://www.linkedin.com/in/pratadaniel94/" class=""><i class="flaticon-linkedin-logo"></i></a>
-        </li>
-        <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--danger" data-toggle="kt-tooltip" title="Entre em contato" data-placement="right">
-            <a href="#" target="_blank" data-toggle="modal" data-target="#kt_modal_4"><i class="flaticon-email"></i></a>
-        </li>
-        <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--brand" id="kt_demo_panel_toggle" data-toggle="kt-tooltip" title="Nosso Grupo" data-placement="right">
-            <a href="#" class=""><i class="flaticon2-telegram-logo"></i></a>
-        </li>
-        <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--warning" id="kt_demo_panel_toggle" data-toggle="kt-tooltip" title="Siga-me GitHub" data-placement="right">
-            <a href="https://github.com/pratadaniel94" class=""><i class="fab fa-github-alt"></i></a>
-        </li>
-    </ul>
-    <!-- end::Sticky Toolbar -->
 
-    <!--begin::Modal-->
-    <div class="modal fade" id="kt_modal_4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Fale conosco</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-group">
-                            <label for="recipient-name" class="form-control-label">Destinatario:</label>
-                            <input type="text" class="form-control" id="recipient-name">
-                        </div>
-                        <div class="form-group">
-                            <label for="message-text" class="form-control-label">Mensagem:</label>
-                            <textarea class="form-control" id="message-text"></textarea>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                    <button type="button" class="btn btn-primary">Enviar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--end::Modal-->
 
     <!--begin::Menu mobile-->
     <div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed ">
@@ -148,9 +104,9 @@
                 <div id="kt_header_menu" class="kt-header-menu kt-header-menu-mobile ">
                     <ul class="kt-menu__nav ">
                         <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel"><a href="/" class="kt-menu__link"><span class="kt-menu__link-text">Home</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a></li>
-                        <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" ><a href="#" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-text">Artigos</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a></li>
-                        <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel"><a href="#" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-text">Parceiros</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a></li>
-                        <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel"><a href="#" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-text">Sobre</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a></li>
+                        <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel"><a href="#" class="kt-menu__link"><span class="kt-menu__link-text">Artigos</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a></li>
+                        <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel"><a href="/parceiros" class="kt-menu__link"><span class="kt-menu__link-text">Parceiros</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a></li>
+                        <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel"><a href="#" class="kt-menu__link"><span class="kt-menu__link-text">Sobre</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a></li>
                     </ul>
                 </div>
                 </div>
@@ -160,91 +116,8 @@
     </div>
     <!--begin::end header-->
 
-    <!--begin::body-->
-    <div class="kt-body kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-grid--stretch" id="kt_body">
-        <div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
-        <div class="kt-container  kt-grid__item kt-grid__item--fluid">
-            {% for apoiador in apoiadores %}
-            <div class="row">
-    <!--begin:: Widgets/Applications/User/Profile3-->
-    <div class="kt-portlet kt-portlet--height-fluid">
-        <div class="kt-portlet__body">
-            <div class="kt-widget kt-widget--user-profile-3">
-                <div class="kt-widget__top">
-                    <div class="kt-widget__media kt-hidden-">
-                        <img src="..{{ apoiador.img_perfil.url }}" alt="image">
-                    </div>
-                    <div class="kt-widget__pic kt-widget__pic--danger kt-font-danger kt-font-boldest kt-font-light kt-hidden">
-                        DP
-                    </div>
-                    <div class="kt-widget__content">
-                        <div class="kt-widget__head">
-                            <a href="#" class="kt-widget__username">
-                                {{ apoiador.nome }}
-                                <i class="flaticon2-correct"></i>
-                            </a>
-                        </div>
-                        <div class="kt-widget__subhead">
-                            <a><i class="flaticon2-ui"></i>{{ apoiador.profissao}}</a>
-                            <a><i class="flaticon2-new-email"></i>{{ apoiador.email}}</a>
-                            <a><i class="flaticon-event-calendar-symbol"></i>{{ apoiador.nascimento }}</a>
-                            <a><i class="flaticon2-placeholder"></i>São Paulo - SP</a>
-                        </div>
-                        <div class="kt-widget__info">
-                            <div class="kt-widget__desc">
-                                {{ apoiador.descricao }}
-                            </div>
-                            <div class="kt-widget__progress">
-                                <div class="kt-widget__text">
-                                    Progresso
-                                </div>
-                                <div class="progress" style="height: 5px;width: 100%;">
-                                    <div class="progress-bar kt-bg-danger" role="progressbar" style="width: 30%;" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <div class="kt-widget__stats">
-                                    30%
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="kt-widget__bottom">
-                    <div class="kt-widget__item">
-                        <div class="kt-widget__icon">
-                            <a href="https://www.linkedin.com/in/pratadaniel94/" class=""><i class="flaticon-linkedin-logo"></i></a>
-                        </div>
-                    </div>
-                    <div class="kt-widget__item">
-                        <div class="kt-widget__icon">
-                            <a href="#" target="_blank" data-toggle="modal" data-target="#kt_modal_4"><i class="flaticon-email"></i></a>
-                        </div>
-                    </div>
-                    <div class="kt-widget__item">
-                        <div class="kt-widget__icon">
-                            <a href="#" class=""><i class="flaticon2-telegram-logo"></i></a>
-                        </div>
-                    </div>
-                    <div class="kt-widget__item">
-                        <div class="kt-widget__icon">
-                            <i class="flaticon-file-2"></i>
-                        </div>
-                    </div>
-                     <div class="kt-widget__item">
-                        <div class="kt-widget__icon">
-                            <a href="https://github.com/pratadaniel94" class=""><i class="fab fa-github-alt"></i></a>
-                        </div>
-                    </div>
-            </div>
-        </div>
-    </div>
-    </div>
-    <!--end:: Widgets/Applications/User/Profile3-->
-            </div>
-            {% endfor %}
-        </div>
-        </div>
-    </div>
-    <!--begin::end body-->
+    {% block body %}
+    {% endblock body %}
 
     <!-- begin:: Footer -->
     <div class="kt-footer  kt-footer--extended  kt-grid__item" id="kt_footer">

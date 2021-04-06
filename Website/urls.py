@@ -20,5 +20,6 @@ from core.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r'^$', index, name="index")
+    url(r'^$', index, name="index"),
+    url(r'^parceiros', get_supporters, name="supporters")
 ]
