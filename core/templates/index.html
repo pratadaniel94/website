@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block body %}
+<!-- begin::Sticky Toolbar -->
+<ul class="kt-sticky-toolbar" style="margin-top: 30px;">
+    <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--success" id="kt_demo_panel_toggle" data-toggle="kt-tooltip" title="Siga-me linkedin" data-placement="right">
+        <a href="https://www.linkedin.com/in/pratadaniel94/" class=""><i class="flaticon-linkedin-logo"></i></a>
+    </li>
+    <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--danger" data-toggle="kt-tooltip" title="Entre em contato" data-placement="right">
+        <a href="#" target="_blank" data-toggle="modal" data-target="#kt_modal_4"><i class="flaticon-email"></i></a>
+    </li>
+    <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--brand" id="kt_demo_panel_toggle" data-toggle="kt-tooltip" title="Nosso Grupo" data-placement="right">
+        <a href="#" class=""><i class="flaticon2-telegram-logo"></i></a>
+    </li>
+    <li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--warning" id="kt_demo_panel_toggle" data-toggle="kt-tooltip" title="Siga-me GitHub" data-placement="right">
+        <a href="https://github.com/pratadaniel94" class=""><i class="fab fa-github-alt"></i></a>
+    </li>
+</ul>
+<!-- end::Sticky Toolbar -->
+
+<!--begin::Modal-->
+<div class="modal fade" id="kt_modal_4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Fale conosco</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="recipient-name" class="form-control-label">Destinatario:</label>
+                        <input type="text" class="form-control" id="recipient-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="form-control-label">Mensagem:</label>
+                        <textarea class="form-control" id="message-text"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                <button type="button" class="btn btn-primary">Enviar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--end::Modal-->
+{% endblock body %}
