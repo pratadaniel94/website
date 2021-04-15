@@ -9,6 +9,7 @@ def index(request):
 
 def get_supporters(request):
     context = {
-        "apoiadores": Apoiadores.objects.all()
+        "apoiadores": Apoiadores.objects.all(),
+        "img_default": "/static/media/profile/default.png"
     }
     return render(request, "parceiros.html", context)
