@@ -1,0 +1,5 @@
+venv
+.idea
+.tox
+MeuSite.egg-info
+__pycache__
